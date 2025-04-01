@@ -1,7 +1,7 @@
 # Usamos una imagen base con Node.js 22
 FROM node:22
 
-# Instalamos git, python3-pip y python3-venv
+# Instalamos git, python3-pip, python3-venv y python3
 RUN apt-get update && apt-get install -y \
     git \
     python3-pip \
@@ -22,5 +22,5 @@ RUN . .venv/bin/activate && pip install -r requirements.txt
 # Damos permisos de ejecución al script
 RUN chmod +x run_rl_swarm.sh
 
-# Ejecutamos el script dentro del entorno virtual
-CMD [".venv/bin/bash", "run_rl_swarm.sh"]
+# Ejecutamos el script con bash, activando el entorno virtual
+CMD ["/bin/bash", "-c", ". .venv/bin/activate && ./run_rl_swarm.sh"]
