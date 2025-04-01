@@ -1,6 +1,3 @@
-Aquí está tu archivo `README.md` bien formateado en Markdown:
-
-```markdown
 # Gensyn Testnet Node Setup
 
 This repository provides a simple way to run a Gensyn testnet node using Docker and Docker Compose. Follow the instructions below to set up and run the node on your machine or VPS.
