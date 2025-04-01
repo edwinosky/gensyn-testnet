@@ -22,4 +22,4 @@ RUN . .venv/bin/activate && pip install -r requirements.txt
 RUN chmod +x run_rl_swarm.sh
 
 # Comando por defecto
-CMD [".venv/bin/bash", "run_rl_swarm.sh"]
+CMD ["bash", "run_rl_swarm.sh"]
