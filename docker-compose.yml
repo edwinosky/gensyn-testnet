@@ -1,0 +1,10 @@
+services:
+  gensyn-node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=development # Puedes ajustarlo según necesites
+    ports:
+      - "3000:3000" # Ajusta los puertos si el nodo expone alguno
+    restart: unless-stopped
